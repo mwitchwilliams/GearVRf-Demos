@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- written by BS Content Studio (Developer)  1.006 -->
+
+
+<X3D profile="Immersive" version="3.0">
+	<head></head>
+	<Scene>
+		<Background skyColor='0.1 0.1 0.1'>
+		</Background>
+		<WorldInfo>
+		</WorldInfo>
+		<NavigationInfo>
+		</NavigationInfo>
+		<Transform DEF="Transform_1" rotation='-0.05002682 0.9797294 -0.1939783 3.688003' translation='-5.577058 11.88411 5.546451'>
+			<Shape>
+				<Appearance>
+					<Material>
+					</Material>
+				</Appearance>
+				<Cone>
+				</Cone>
+			</Shape>
+		</Transform>
+		<TimeSensor DEF="TimeSensor_1" cycleInterval='3'>
+		</TimeSensor>
+		<PositionInterpolator DEF="PositionInterpolator_1" key='0,1' keyValue='4.290519 14.43688 11.84908,-5.577058 11.88411 5.546451'>
+		</PositionInterpolator>
+		<OrientationInterpolator DEF="OrientationInterpolator_1" key='0' keyValue='-0.05002682 0.9797294 -0.1939783 3.688003'>
+		</OrientationInterpolator>
+		<ROUTE fromNode="TimeSensor_1" fromField="fraction_changed" toNode="PositionInterpolator_1" toField="set_fraction">
+		</ROUTE>
+		<ROUTE fromNode="PositionInterpolator_1" fromField="value_changed" toNode="Transform_1" toField="set_translation">
+		</ROUTE>
+		<ROUTE fromNode="TimeSensor_1" fromField="fraction_changed" toNode="OrientationInterpolator_1" toField="set_fraction">
+		</ROUTE>
+		<ROUTE fromNode="OrientationInterpolator_1" fromField="value_changed" toNode="Transform_1" toField="set_rotation">
+		</ROUTE>
+	</Scene>
+</X3D>

@@ -29,6 +29,7 @@
 				<Cylinder></Cylinder>
 				<Appearance>
 					<Material diffuseColor=".3 .6 .9"/>
+					<ImageTexture url="sun.jpg"/>
 				</Appearance>
 			</Shape>
 		</Transform>
@@ -39,7 +40,7 @@
 				<Cylinder></Cylinder>
 				<Appearance>
 					<Material diffuseColor="1 1 1"/>
-					<ImageTexture url="sun.jpg"/>
+					<ImageTexture url="dog1.jpg"/>
 				</Appearance>
 			</Shape>
 		</Transform>
