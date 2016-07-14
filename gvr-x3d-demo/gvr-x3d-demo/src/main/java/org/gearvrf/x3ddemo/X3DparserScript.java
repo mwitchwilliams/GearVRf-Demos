@@ -109,7 +109,6 @@ public class X3DparserScript extends GVRScript
   {
     mGVRContext = gvrContext;
 
-
     scene = gvrContext.getNextMainScene(new Runnable()
     {
       @Override
@@ -117,7 +116,7 @@ public class X3DparserScript extends GVRScript
       {
         for (GVRAnimation animation : mAnimations)
         {
-            animation.start(mAnimationEngine);
+          animation.start(mAnimationEngine);
         }
       }
     });
@@ -127,11 +126,11 @@ public class X3DparserScript extends GVRScript
     scene.getMainCameraRig().getRightCamera().setBackgroundColor(Color.BLACK);
 
     GVRModelSceneObject model = new GVRModelSceneObject(mGVRContext);
-    //String filename = "animation01.x3d";
+    // String filename = "animation01.x3d";
     // String filename = "animation02.x3d";
     // String filename = "animation03.x3d";
     // String filename = "animation04.x3d";
-    //String filename = "animation05.x3d";
+    // String filename = "animation05.x3d";
     // String filename = "animation06.x3d";
     // String filename = "animation07.x3d";
     // String filename = "animation08.x3d";
@@ -141,10 +140,10 @@ public class X3DparserScript extends GVRScript
     // String filename = "backgroundtexturemap01.x3d";
     // String filename = "boxesspheres.x3d";
     // String filename = "conered.x3d";
-     String filename = "cylinders.x3d";
+    // String filename = "cylinders.x3d";
     // String filename = "directionallight1.x3d";
     // String filename = "bscontact04.x3d";
-     //String filename = "elevationgrid.x3d";
+    // String filename = "elevationgrid.x3d";
     // String filename = "emissivecolor.x3d";
     // String filename = "exponentcone.x3d";
     // String filename = "exponentplane.x3d";
@@ -153,9 +152,9 @@ public class X3DparserScript extends GVRScript
     // String filename = "levelofdetail01.x3d";
     // String filename = "levelofdetail02.x3d";
     // String filename = "levelofdetail03.x3d";
-//     String filename = "navigationinfo.x3d";
-    //String filename = "plane.x3d";
-    //String filename = "planemore.x3d";
+    // String filename = "navigationinfo.x3d";
+    // String filename = "plane.x3d";
+    // String filename = "planemore.x3d";
     // String filename = "planetexturexform.x3d";
     // String filename = "texturecoordinatetest.x3d";
     // String filename = "texturecoordinatetestsubset.x3d";
@@ -174,7 +173,7 @@ public class X3DparserScript extends GVRScript
     // String filename = "multiviewpoints03.x3d";
     // String filename = "multiviewpoints04.x3d";
     // String filename = "touchSensor.x3d";
-    //String filename = "teapottorusdirlights.x3d";
+    String filename = "teapottorusdirlights.x3d";
     // String filename = "teapottorus.x3d";
     // String filename = "pointlightattenuationtest.x3d";
     // String filename = "usedef01.x3d";
@@ -183,15 +182,15 @@ public class X3DparserScript extends GVRScript
     // String filename = "usedef04.x3d";
     // String filename = "usedef05.x3d";
     // String filename = "usedef06.x3d";
-    //String filename = "usedefCoordinate1.x3d";
-    //String filename = "usedef1Normal.x3d";
-    //String filename = "usedefTextureCoord1.x3d";
+    // String filename = "usedefCoordinate1.x3d";
+    // String filename = "usedef1Normal.x3d";
+    // String filename = "usedefTextureCoord1.x3d";
     // String filename = "usedefprimitive01.x3d";
     // String filename = "usedeftext01.x3d";
-    //String filename = "usedeftransform01.x3d";
-    //String filename = "usedefTransform02.x3d";
-    //String filename = "usedefTransform03.x3d";
-    //   String filename = "usedefGroup01.x3d";
+    // String filename = "usedeftransform01.x3d";
+    // String filename = "usedefTransform02.x3d";
+    // String filename = "usedefTransform03.x3d";
+    // String filename = "usedefGroup01.x3d";
     // String filename = "usedefdirlight.x3d";
     // String filename = "usedefpointlight.x3d";
     // String filename = "usedefspotlight.x3d";
@@ -200,29 +199,39 @@ public class X3DparserScript extends GVRScript
     // String filename = "levelofdetailusedef02.x3d";
     // String filename = "levelofdetailusedef03.x3d";
     // String filename = "viewpointAnimation01.x3d";
-  //String filename = "bsconstact01.x3d";
-//   String filename = "bsconstact02.x3d";
-   //String filename = "popart.x3d";
+    // String filename = "bsconstact01.x3d";
+    // String filename = "bsconstact02.x3d";
+    // String filename = "popart.x3d";
     try
     {
       GVRCameraRig mainCameraRig = scene.getMainCameraRig();
-      
+
       model = gvrContext.getAssetLoader().loadModel(filename, scene);
       List<GVRAnimation> animations = model.getAnimations();
       mAnimations = animations;
 
       GVRTransform newtrans = model.getCameraRig().getTransform();
-      mainCameraRig.getOwnerObject().getTransform().setModelMatrix(newtrans.getLocalModelMatrix4f());
-      
-      int backgroundColor = model.getCameraRig().getLeftCamera().getBackgroundColor();
+      //mainCameraRig.getOwnerObject().getTransform()
+      //    .setModelMatrix(newtrans.getLocalModelMatrix4f());
+
+      int backgroundColor = model.getCameraRig().getLeftCamera()
+          .getBackgroundColor();
       mainCameraRig.getLeftCamera().setBackgroundColor(backgroundColor);
       mainCameraRig.getRightCamera().setBackgroundColor(backgroundColor);
+
       
+      GVRTransform mainCameraRigTransform = mainCameraRig.getTransform();
+      mainCameraRigTransform.setPosition(newtrans.getPositionX(),
+            newtrans.getPositionY(),
+            newtrans.getPositionZ());
+      
+
       // check if a headlight was attached to the camera rig
-      //   during parsing.  NavigationInfo node specifies this.
+      // during parsing. NavigationInfo node specifies this.
       // If 4 objects are attached to the camera rig, one is a
-      //    dirLight.  Thus attach a dirLight to the main camera
-      if ( model.getCameraRig().getChildrenCount() > 3 ) {
+      // dirLight. Thus attach a dirLight to the main camera
+      if (model.getCameraRig().getChildrenCount() > 3)
+      {
         GVRSceneObject headlightSceneObject = new GVRSceneObject(gvrContext);
         headlightSceneObject.setName("headlightSceneObject");
         GVRDirectLight headLight = new GVRDirectLight(gvrContext);
@@ -230,7 +239,7 @@ public class X3DparserScript extends GVRScript
         headLight.setDiffuseIntensity(1, 1, 1, 1);
         mainCameraRig.addChildObject(headlightSceneObject);
       }
-      
+
     }
     catch (FileNotFoundException e)
     {

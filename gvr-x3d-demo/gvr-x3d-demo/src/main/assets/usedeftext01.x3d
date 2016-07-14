@@ -2,7 +2,7 @@
     <scene>
 		<Background skyColor='0 0 0'/>
 		
-		<Viewpoint DEF="vp1" position='0 0 0'/>
+		<Viewpoint DEF="vp1" position='0 0 15'/>
 
          <transform translation="1.75 .4 -4">
 	        <Shape DEF="text01">
@@ -26,9 +26,9 @@
 	        </Shape>
         </transform>
  
-         <transform translation="1.75 -2.4 -4">
+         <!-- transform translation="1.75 -2.4 -4">
 	        <Shape USE="text02"/>
-        </transform>
+        </transform -->
 
          <!-- transform translation="-1.1 -2.4 -4">
 	        <Shape USE="text01"/>
