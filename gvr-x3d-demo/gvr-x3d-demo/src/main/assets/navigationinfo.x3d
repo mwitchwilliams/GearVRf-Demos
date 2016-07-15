@@ -3,7 +3,6 @@
 <X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <Scene DEF='scene'>
 
-	<!-- NavigationInfo DEF='NavInfoName' headlight="TRUE" type='"WALK" "ANY"' transitionType='"ANIMATE"' transitionTime='1.0' speed="3", avatarSize = "0.1 0.1 1"/ -->
 	<NavigationInfo DEF='NavInfoName' headlight="TRUE" type='"WALK" "ANY"' transitionType='"ANIMATE"' transitionTime='1.0' speed="3" avatarSize = "0.1 0.1 1"/>
 	<Viewpoint position="0 0 0"/>
 
@@ -25,8 +24,6 @@
 		</Shape>
 	</Transform>
 
-	<!-- DirectionalLight DEF="myDirLight1" direction="0 -.2 -1" intensity=".3" color="1 1 1"/ -->
-    
     <Transform translation='-3 -3 -5'>
       <Shape>
         <Appearance>
