@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- written by BS Content Studio (Developer)  1.006 -->
+
+
+<X3D profile="Immersive" version="3.0">
+	<head></head>
+	<Scene>
+		<Background skyColor='0.1 0.1 0.1'>
+		</Background>
+		<WorldInfo>
+		</WorldInfo>
+		<NavigationInfo>
+		</NavigationInfo>
+		<Viewpoint DEF="MainCamera" position='0 0 0'>
+		</Viewpoint>
+		<Transform DEF="Transform_1" translation='-2.216967 -5.161806 -10.06761'>
+			<Shape DEF="myCone">
+				<Appearance>
+					<Material diffuseColor='0.3333333 1 0'>
+					</Material>
+				</Appearance>
+				<Cone>
+				</Cone>
+			</Shape>
+		</Transform>
+		<Transform DEF="Dog_Cylinder" rotation='0.2626669 0.9479328 0.1800819 2.401498' translation='-1.254774 0.4984653 -8.020402'>
+			<Shape>
+				<Appearance>
+					<Material diffuseColor='1 1 1'>
+					</Material>
+					<ImageTexture url='"deedee1.jpg"'>
+					</ImageTexture>
+				</Appearance>
+				<Cylinder>
+				</Cylinder>
+			</Shape>
+		</Transform>
+		<TimeSensor DEF="TimeSensor_1" cycleInterval='2.5' loop='true'>
+		</TimeSensor>
+		<PositionInterpolator DEF="PositionInterpolator_1" key='0,1' keyValue='1.956169 -5.161806 -10,-2.443993 -5.161806 -10.07129'>
+		</PositionInterpolator>
+		<ROUTE fromNode="TimeSensor_1" fromField="fraction_changed" toNode="PositionInterpolator_1" toField="set_fraction">
+		</ROUTE>
+		<ROUTE fromNode="PositionInterpolator_1" fromField="value_changed" toNode="Transform_1" toField="set_translation">
+		</ROUTE>
+	</Scene>
+</X3D>

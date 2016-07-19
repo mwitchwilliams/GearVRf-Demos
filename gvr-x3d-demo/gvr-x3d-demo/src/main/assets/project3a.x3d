@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- written by BS Content Studio (Developer)  1.006 -->
+
+
+<X3D profile="Immersive" version="3.0">
+	<head></head>
+	<Scene>
+		<Background skyColor='0.1 0.1 0.1'>
+		</Background>
+		<WorldInfo>
+		</WorldInfo>
+		<NavigationInfo>
+		</NavigationInfo>
+		<Viewpoint DEF="MainCamera" position='0 0 0'>
+		</Viewpoint>
+		<Transform translation='0 0 -10'>
+			<Shape DEF="myCone">
+				<Appearance>
+					<Material diffuseColor='0.3333333 1 0'>
+					</Material>
+					<ImageTexture url='"deedee1.jpg"'>
+					</ImageTexture>
+				</Appearance>
+				<Cone>
+				</Cone>
+			</Shape>
+		</Transform>
+		<Transform translation='-2 -1 -8'>
+			<Shape>
+				<Appearance>
+					<Material diffuseColor='1 1 0'>
+					</Material>
+				</Appearance>
+				<Cylinder>
+				</Cylinder>
+			</Shape>
+		</Transform>
+	</Scene>
+</X3D>

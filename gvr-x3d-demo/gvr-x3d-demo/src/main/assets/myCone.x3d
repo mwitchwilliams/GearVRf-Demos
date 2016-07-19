@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- written by BS Content Studio (Developer)  1.006 -->
+
+
+<X3D profile="Immersive" version="3.0">
+	<head></head>
+	<Scene>
+		<Background skyColor='0.1 0.1 0.1'>
+		</Background>
+		<WorldInfo>
+		</WorldInfo>
+		<NavigationInfo>
+		</NavigationInfo>
+		<Viewpoint DEF="MainCamera" position='0 0 0'>
+		</Viewpoint>
+		<Transform translation='0 0 -10'>
+			<Shape DEF="myCone">
+				<Appearance>
+					<Material>
+					</Material>
+				</Appearance>
+				<Cone>
+				</Cone>
+			</Shape>
+		</Transform>
+	</Scene>
+</X3D>
