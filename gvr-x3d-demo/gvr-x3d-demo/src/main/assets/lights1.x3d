@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- written by BS Content Studio (Developer)  1.007 -->
+
+
+<X3D profile="Immersive" version="3.0">
+	<head></head>
+	<Scene>
+		<Background skyColor='0.1 0.1 0.1'>
+		</Background>
+		<WorldInfo>
+		</WorldInfo>
+		<NavigationInfo>
+		</NavigationInfo>
+		<Viewpoint DEF="MainCamera" position='0 0 0'>
+		</Viewpoint>
+		<Transform translation='2 0 -10'>
+			<Shape DEF="myCone">
+				<Appearance>
+					<Material diffuseColor='1 1 1'>
+					</Material>
+					<ImageTexture url='"news_texture_map.jpg"'>
+					</ImageTexture>
+				</Appearance>
+				<Cone>
+				</Cone>
+			</Shape>
+		</Transform>
+		<Transform DEF="myCylinder" rotation='0.2653143 0.9469914 0.1811506 2.402528' translation='-2 1 -8'>
+			<Shape>
+				<Appearance>
+					<Material diffuseColor='1 1 1'>
+					</Material>
+					<ImageTexture url='"texture_rotation_testpattern.jpg"'>
+					</ImageTexture>
+				</Appearance>
+				<Cylinder>
+				</Cylinder>
+			</Shape>
+		</Transform>
+		<PointLight DEF="myFirstPointLight" color='1 0 0' location='0 0 -6'>
+		</PointLight>
+	</Scene>
+</X3D>

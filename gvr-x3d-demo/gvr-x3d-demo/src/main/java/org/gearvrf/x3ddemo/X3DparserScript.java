@@ -106,8 +106,8 @@ public class X3DparserScript extends GVRScript
     GVRModelSceneObject model = new GVRModelSceneObject(mGVRContext);
     // X3d Demo comes with mutliple test files.
     // Replace 'filename' to view another .x3d file
-    String filename = "teapotandtorus.x3d";
-    //String filename = "project4c.x3d";
+    //String filename = "teapotandtorus.x3d";
+    String filename = "lights1.x3d";
     try
     {
       GVRCameraRig mainCameraRig = scene.getMainCameraRig();
