@@ -77,7 +77,8 @@ public class X3DparserScript extends GVRMain
     GVRModelSceneObject model = new GVRModelSceneObject(mGVRContext);
     // X3D test files should be in the assets directory.
     // Replace 'filename' to view another .x3d file
-    String filename = "cylindersandplanes.x3d";
+    //String filename = "touchSensor1.x3d";
+    String filename = "SphereSensor01.x3d";
     try
     {
       GVRCameraRig mainCameraRig = scene.getMainCameraRig();
