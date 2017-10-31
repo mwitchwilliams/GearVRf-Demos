@@ -31,7 +31,7 @@ import org.gearvrf.GVRDirectLight;
 import org.gearvrf.GVRLightBase;
 import org.gearvrf.GVRMain;
 import org.gearvrf.GVRMesh;
-import org.gearvrf.GVRShader;
+//import org.gearvrf.GVRShader;
 import org.gearvrf.io.GVRControllerType;
 import org.gearvrf.io.GVRInputManager;
 import org.gearvrf.scene_objects.GVRModelSceneObject;
@@ -68,6 +68,9 @@ public class X3DparserScript extends GVRMain
   public X3DparserScript(X3DparserActivity activity)
   {
   }
+  public X3DparserScript()
+  {
+  }
 
   public void onInit(GVRContext gvrContext)
   {
@@ -81,6 +84,74 @@ public class X3DparserScript extends GVRMain
     // X3D test files should be in the assets directory.
     // Replace 'filename' to view another .x3d file
     String filename = "cylindersandplanes.x3d";
+    filename = "textureCoordTests.x3d";
+
+    filename = "JavaScript_PerFrame_01_ProceduralAnim.x3d";
+    //filename = "JavaScript_PerFrame_02_LaunchSphere.x3d";
+    //filename = "JavaScript_PerFrame_03_TimeStamp.x3d";
+    //filename = "JavaScript_PerFrame_04_GrabAnObject.x3d";
+    filename = "JavaScript_PerFrame_05_LightControls.x3d";
+
+    filename = "JavaScriptLightsOn.x3d";
+    filename = "JavaScriptTransform.x3d";
+
+     filename = "JavaScriptMoveColorPointLights.x3d";
+
+        /*
+
+    filename = "touchSensor1.x3d";
+
+    filename = "touchSensor4.x3d";
+    filename = "touchSensor5.x3d";
+    filename = "anchor_newX3DFile_viewpoints.x3d";
+    filename = "anchor_viewpoint.x3d";
+    filename = "anchor_webPages.x3d";
+
+
+    filename = "animation01.x3d";
+
+    filename = "animation09.x3d";
+
+    filename = "inlinedemo01.x3d";
+
+    filename = "teapotandtorus.x3d";
+    filename = "usedef1Normal.x3d";
+    filename = "usedefCoordinate1.x3d";
+    filename = "usedefTextureCoord1.x3d";
+    filename = "usedef02.x3d";
+
+    filename = "usedef03.x3d";
+    filename = "usedef04.x3d";
+    filename = "usedef05.x3d";
+    filename = "usedef06.x3d";
+    filename = "usedefdirlight.x3d";
+    filename = "usedefGroup01.x3d";
+    filename = "usedefpointlight.x3d";
+    filename = "usedefprimitive01.x3d";
+    filename = "usedeftext01.x3d";
+
+    filename = "font_multipleFonts.x3d";
+    filename = "font_sizeStyleJustification.x3d";
+    filename = "font_def_use.x3d";
+
+    filename = "levelofdetail02.x3d";
+    filename = "levelofdetail03.x3d";
+    filename = "levelofdetailusedef01.x3d";
+    filename = "levelofdetailusedef02.x3d";
+    filename = "levelofdetailusedef03.x3d";
+    filename = "levelofdetailusedef04.x3d";
+    filename = "levelofdetail_circle01.x3d";
+    filename = "levelofdetail_mult_obj_Group.x3d";
+    filename = "levelofdetail_mult_obj_Shape.x3d";
+    filename = "levelofdetail_mult_obj_Transform.x3d";
+    filename = "levelofdetail_mult_children.x3d";
+    filename = "LOD_TransformContainInline.x3d";
+
+    filename = "lod_TouchSensor.x3d";
+    */
+    //filename = "emissivecolor.x3d";
+
+
     try
     {
       GVRCameraRig mainCameraRig = scene.getMainCameraRig();
@@ -99,6 +170,10 @@ public class X3DparserScript extends GVRMain
       // during parsing, as specified by the NavigationInfo node.
       // If 4 objects are attached to the camera rig, one must be the
       // directionalLight. Thus attach a dirLight to the main camera
+
+      /*
+
+
       if (GVRShader.isVulkanInstance()) // remove light on Vulkan
       {
         List<GVRLightBase> lights = model.getAllComponents(GVRLightBase.getComponentType());
@@ -117,6 +192,9 @@ public class X3DparserScript extends GVRMain
         headLight.setDiffuseIntensity(1, 1, 1, 1);
         mainCameraRig.addChildObject(headlightSceneObject);
       }
+
+      */
+
     }
     catch (FileNotFoundException e)
     {

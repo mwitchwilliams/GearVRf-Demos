@@ -21,7 +21,8 @@ import org.gearvrf.GVRActivity;
 
 public class X3DparserActivity extends GVRActivity {
 
-    X3DparserScript x3dParserScript = new X3DparserScript(this);
+    //X3DparserScript x3dParserScript = new X3DparserScript(this);
+    X3DparserScript x3dParserScript = new X3DparserScript();
 
     @Override
     protected void onCreate(Bundle icicle) {
