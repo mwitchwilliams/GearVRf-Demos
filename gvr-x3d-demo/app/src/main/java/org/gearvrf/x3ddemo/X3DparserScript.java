@@ -73,6 +73,11 @@ public class X3DparserScript extends GVRMain
     if (null == filename) {
       filename = "JavaScriptLightColors.x3d";
     }
+    filename = "ar_01.x3d";
+
+    //filename = "emissivecolor.x3d";
+    //filename = "emissiveWithTexture.x3d";
+    //filename = "EmissiveColor_test1.x3d";
     try
     {
       model = gvrContext.getAssetLoader().loadModel(filename, scene);
